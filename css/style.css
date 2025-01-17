@@ -9,89 +9,202 @@ ul, li, ol {
   list-style: none;
 }
 
-header {
+.header {
   position: fixed;
   width: 100%;
-  margin-top: 10px;
-  transition: all 500ms;
+  background: #f4f4f4;
+  z-index: 1000;
+  padding: 15px 0;
 }
-header .headerList {
+
+.headerList {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
-}
-header .headerList .navList {
-  display: flex;
-  justify-content: space-around;
-}
-header .headerList .navList .navListItem {
-  margin-left: 30px;
-  color: rgb(76, 88, 102);
-  font-family: Roboto;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 23px;
-  letter-spacing: 0%;
-  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin: 0;
+  list-style: none;
 }
 
-.btnsList {
-  display: flex;
-}
-.btnsList .seaarchBtn,
-.btnsList .logInBtn {
-  background: transparent;
-  border: 0;
-  margin: 0 10px;
-  transition: all, 500ms;
-}
-.btnsList .seaarchBtn:hover,
-.btnsList .logInBtn:hover {
-  transform: scale(1.3);
+.headerList li {
+  transition: transform 0.3s;
 }
 
-.navListItem {
-  position: relative;
-  transition: all 500ms;
-  cursor: pointer;
-}
-.navListItem:hover {
-  text-decoration: none;
-  transform: scale(1.3);
-}
-.navListItem::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 100%;
-  height: 2px;
-  background: rgb(76, 88, 102);
-  transform: scaleX(0);
-  transition: transform 500ms;
-}
-.navListItem:hover::after {
-  transform: scaleX(1);
+.headerList li img {
+  transition: transform 0.3s;
 }
 
-.searchInp {
-  border: solid 1px;
-  border-radius: 10px;
-}
-
-.displayNone {
+.desktop-nav {
   display: none;
 }
 
-.searchInpAnim {
-  animation: searchInpAnim 500ms forwards;
+.desktop-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes searchInpAnim {
-  from {
-    width: 0;
+.desktop-nav li {
+  transition: transform 0.3s;
+}
+
+.desktop-nav li:hover {
+  transform: scale(1.3);
+}
+
+.desktop-nav a {
+  color: black !important;
+  text-decoration: none !important;
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.desktop-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  height: 2px;
+  background: black;
+  transform: scaleX(0);
+  transition: transform 0.3s;
+}
+
+.desktop-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.mobile-menu li {
+  margin: 20px 0;
+}
+
+.mobile-menu a {
+  color: black !important;
+  text-decoration: none !important;
+  font-size: 40px;
+  padding: 10px;
+}
+
+.mobile-menu {
+  background-color: white;
+}
+
+.burger {
+  width: 30px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+  display: none;
+  background: rgba(237, 0, 0, 0) !important;
+  z-index: 10000;
+}
+
+.burger span {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background: #000000;
+  transition: 0.3s;
+  left: 0;
+  z-index: 1000;
+}
+
+.burger span:nth-child(1) {
+  top: 0;
+}
+
+.burger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.burger span:nth-child(3) {
+  bottom: 0;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 11px;
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 11px;
+}
+
+.search-btn, .login-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.search-input {
+  display: none;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-input.active {
+  display: block;
+}
+
+/* Media Queries */
+@media (max-width: 700px) {
+  .desktop-nav {
+    display: none;
   }
-  to {
-    width: 70%;
+  .burger {
+    display: block;
   }
+}
+@media (min-width: 701px) {
+  .desktop-nav {
+    display: block;
+  }
+  .burger {
+    display: none;
+  }
+  .mobile-menu {
+    display: none !important;
+  }
+}
+.worstAnim {
+  transition: all 0.3s;
+}
+.worstAnim:hover {
+  transform: scale(1.3);
 }
