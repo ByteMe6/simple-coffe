@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchBtn = document.querySelector('.search-btn');
     const searchInput = document.querySelector('.search-input');
     const loginBtn = document.querySelector('.login-btn');
+    const desktopNav = document.querySelector('.desktop-nav');
+    const btnList = document.querySelectorAll('.btnList');
 
     // Burger Menu Toggle
     burger.addEventListener('click', () => {
@@ -15,6 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Search Toggle
     searchBtn.addEventListener('click', () => {
         searchInput.classList.toggle('active');
+        loginBtn.classList.toggle('remove');
+        desktopNav.classList.toggle('remove');
+        loginBtn.classList.toggle('remoev');
+        btnList.forEach(btn => {
+            btn.classList.toggle('loong');
+            // btn.classList.toggle('remoev');
+        });
     });
 
     // Login Modal

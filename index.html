@@ -29,8 +29,8 @@
                 <span></span>
             </li>
             <!-- Controls -->
-            <li>
-                <button class="search-btn worstAnim"><img src="./img/searchIcon.png" alt=""></button>
+            <li class="btnList input-container">
+                <button class="search-btn worstAnim"><img src="./img/searchIcon.png" alt="" class="search-icon"></button>
                 <input type="text" class="search-input">
                 <button class="login-btn worstAnim"><img src="./img/loginIcon.png" alt=""></button>
             </li>
@@ -45,6 +45,33 @@
             <li><a href="#">Контакты</a></li>
         </ul>
     </div>
+
+    <div class="modal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon1">@</span>
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+  <span class="input-group-text" id="basic-addon2"><img src="./img/key.png" alt="" class="key"></span>
+  <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-secondary login-btn-second">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
     <script src="script.js"></script> <!-- Подключение JavaScript -->
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
