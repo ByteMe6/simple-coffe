@@ -1,0 +1,56 @@
+.hero {
+   display: flex; 
+}
+.heroImgBtn{
+    width: fit-content;
+    // max-width: 50%;
+}
+.heroImageBox{
+    max-width: 50%;
+}
+.heroH1{
+    color: rgb(76, 88, 102);
+    font-family: Roboto;
+    font-size: 60px;
+font-weight: 400;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: left;
+}
+
+.heroMainText{
+    color: rgb(133, 133, 155);
+font-family: Roboto;
+font-size: 18px;
+font-weight: 400;
+line-height: 150%;
+letter-spacing: 0%;
+text-align: left;
+}
+#heroMainButton{
+    box-sizing: border-box;
+    border: 1px solid $violet;
+    padding: 20px 50px 20px 50px;
+    color: $violet;
+    width: 30%;
+    &:hover{
+        color: white;
+        background-color: $violet;
+
+    }
+}
+
+.heroTextBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .heroMainButton, .heroMainText{
+        margin-top: 20px;
+    }
+
+    .heroMainText{
+        width: 90%;
+    }
+}
+
+

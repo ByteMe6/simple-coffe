@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 ul, li, ol {
@@ -18,20 +19,32 @@ ul, li, ol {
 }
 
 .headerList {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0 20px;
   margin: 0;
   list-style: none;
 }
 
 .headerList li {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .headerList li img {
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .desktop-nav {
@@ -39,6 +52,8 @@ ul, li, ol {
 }
 
 .desktop-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 20px;
   list-style: none;
@@ -47,11 +62,15 @@ ul, li, ol {
 }
 
 .desktop-nav li {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .desktop-nav li:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .desktop-nav a {
@@ -59,23 +78,29 @@ ul, li, ol {
   text-decoration: none !important;
   position: relative;
   display: inline-block;
+  -webkit-transition: color 0.3s;
   transition: color 0.3s;
 }
 
 .desktop-nav a::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: -2px;
   height: 2px;
   background: black;
-  transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .desktop-nav a:hover::after {
-  transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .mobile-menu {
@@ -87,11 +112,17 @@ ul, li, ol {
   height: 100vh;
   background: rgba(0, 0, 0, 0.9);
   z-index: 999;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .mobile-menu.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -132,6 +163,7 @@ ul, li, ol {
   width: 100%;
   height: 3px;
   background: #000000;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   left: 0;
   z-index: 1000;
@@ -143,7 +175,8 @@ ul, li, ol {
 
 .burger span:nth-child(2) {
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .burger span:nth-child(3) {
@@ -151,7 +184,8 @@ ul, li, ol {
 }
 
 .burger.active span:nth-child(1) {
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
   top: 11px;
 }
 
@@ -160,7 +194,8 @@ ul, li, ol {
 }
 
 .burger.active span:nth-child(3) {
-  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   bottom: 11px;
 }
 
@@ -169,11 +204,15 @@ ul, li, ol {
   border: none;
   cursor: pointer;
   padding: 5px;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .search-btn:hover, .login-btn:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .search-input {
@@ -196,6 +235,7 @@ ul, li, ol {
     display: block;
   }
 }
+
 @media (min-width: 701px) {
   .desktop-nav {
     display: block;
@@ -207,11 +247,15 @@ ul, li, ol {
     display: none !important;
   }
 }
+
 .worstAnim {
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
+
 .worstAnim:hover {
-  transform: scale(1.3);
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
 }
 
 .search-input {
@@ -223,53 +267,100 @@ ul, li, ol {
 }
 
 .loong {
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .burger.active {
-  transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
   transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .loong {
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   opacity: 1;
 }
 
 .loong.remoev {
   opacity: 0;
-  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
-@keyframes fadeOut {
+
+@-webkit-keyframes fadeOut {
   from {
     opacity: 1;
-    transform: translateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
   to {
     opacity: 0;
-    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
 }
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
 .loong {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  animation: fadeIn 0.3s ease forwards;
+  -webkit-animation: fadeIn 0.3s ease forwards;
+          animation: fadeIn 0.3s ease forwards;
 }
 
 .loong.remoev {
-  animation: fadeOut 0.3s ease forwards;
+  -webkit-animation: fadeOut 0.3s ease forwards;
+          animation: fadeOut 0.3s ease forwards;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -282,13 +373,95 @@ ul, li, ol {
 }
 
 .modal-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .login-btn-second {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 5px;
 }
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.heroImgBtn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.heroImageBox {
+  max-width: 50%;
+}
+
+.heroH1 {
+  color: #4c5866;
+  font-family: Roboto;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.heroMainText {
+  color: #85859b;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+#heroMainButton {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #7875fe;
+  padding: 20px 50px 20px 50px;
+  color: #7875fe;
+  width: 30%;
+}
+
+#heroMainButton:hover {
+  color: white;
+  background-color: #7875fe;
+}
+
+.heroTextBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.heroTextBox .heroMainButton, .heroTextBox .heroMainText {
+  margin-top: 20px;
+}
+
+.heroTextBox .heroMainText {
+  width: 90%;
+}
+/*# sourceMappingURL=style.css.map */
