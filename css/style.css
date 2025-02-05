@@ -395,6 +395,13 @@ ul, li, ol {
   gap: 5px;
 }
 
+header {
+  position: fixed;
+  background-color: #fff;
+  z-index: 10000;
+  width: 100%;
+}
+
 .hero {
   display: -webkit-box;
   display: -ms-flexbox;

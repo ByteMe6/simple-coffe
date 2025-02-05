@@ -253,3 +253,10 @@
   align-items: center;
   gap: 5px;
 }
+
+header{
+  position: fixed;
+  background-color: #fff;
+  z-index: 10000;
+  width: 100%;
+}
