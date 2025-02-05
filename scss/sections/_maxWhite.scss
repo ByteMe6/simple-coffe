@@ -1,0 +1,42 @@
+.maxWhite {
+  display: flex;
+  background: $secondaryBg;
+  margin-top: 0;
+  @media (max-width: 700px) {
+    flex-direction: column;
+    max-width: 100%;
+    .maxWhiteImg{
+        max-width: 100%;
+    }
+  }
+}
+.versions {
+  margin-bottom: 0;
+}
+
+main {
+  background-color: $secondaryBg;
+}
+.hero {
+  background-color: $white;
+}
+
+.maxWhiteText {
+  color: rgb(133, 133, 155);
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 170%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.maxWhiteHeading {
+  color: rgb(102, 102, 102);
+  font-family: Roboto;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: left;
+}
