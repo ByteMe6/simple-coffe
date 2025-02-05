@@ -52,5 +52,21 @@ text-align: left;
         width: 90%;
     }
 }
+// adaptation
+.hero {
+    @media (max-width: 700px) {
+        overflow: hidden;
+        flex-direction: column;
+        
+        .heroImgBtn, .heroImageBox {
+            width: 200%;
+        }
+        #heroMainButton{
+            padding: 10px;
+        }
 
-
+        .heroH1{
+            width: 100%;
+        }
+    }
+}
