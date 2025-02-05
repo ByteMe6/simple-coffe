@@ -496,6 +496,15 @@ ul, li, ol {
   /* Равномерное распределение с промежутками */
 }
 
+@media (max-width: 700px) {
+  .versionList {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .versionListItem {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -518,5 +527,25 @@ ul, li, ol {
 .versions {
   padding-top: 20px;
   background-color: #ebebeb;
+}
+
+.versionListItemHeading {
+  color: #666666;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.versionListItemText {
+  color: #85859b;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0%;
+  text-align: left;
 }
 /*# sourceMappingURL=style.css.map */
