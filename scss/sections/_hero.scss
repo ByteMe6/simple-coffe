@@ -71,3 +71,10 @@
     }
   }
 }
+
+.hero {
+    padding-left: 6.25rem;
+    @media (max-width: 700px) {
+        padding-left: 0;
+    }
+}

@@ -551,6 +551,16 @@ html, body {
   }
 }
 
+.hero {
+  padding-left: 6.25rem;
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding-left: 0;
+  }
+}
+
 .versionList {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -668,5 +678,120 @@ main {
   line-height: 100%;
   letter-spacing: 0%;
   text-align: left;
+}
+
+.cardSalesMore {
+  color: #7875fe;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0%;
+  text-align: left;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  text-shadow: 0 0 0 rgba(120, 117, 254, 0);
+}
+
+.cardSalesMore svg {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.cardSalesMore:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  text-shadow: 0 0 10px rgba(120, 117, 254, 0.3);
+}
+
+.cardSalesMore:hover svg {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.cardSalesText {
+  color: #85859b;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 170%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.cardSalesTiraj {
+  color: #b5b5bd;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.cardSalesHeading {
+  color: #666666;
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.salesList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
+}
+
+.salesList .salesCard {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(25% - 23px);
+          flex: 0 0 calc(25% - 23px);
+  min-width: 250px;
+}
+
+.salesList .salesCard img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  .salesList .salesCard {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 calc(50% - 15px);
+            flex: 0 0 calc(50% - 15px);
+  }
+}
+
+@media (max-width: 700px) {
+  .salesList {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+  }
+  .salesList .salesCard {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

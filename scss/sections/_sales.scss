@@ -1,0 +1,88 @@
+.cardSalesMore {
+  color: $violet;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0%;
+  text-align: left;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  transform: scale(1);
+  text-shadow: 0 0 0 rgba($violet, 0);
+  
+  svg {
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  &:hover {
+    transform: scale(1.05);
+    text-shadow: 0 0 10px rgba($violet, 0.3);
+    
+    svg {
+      transform: translateX(5px);
+    }
+  }
+}
+.cardSalesText {
+  color: rgb(133, 133, 155);
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 170%;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.cardSalesTiraj {
+  color: rgb(181, 181, 189);
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+.cardSalesHeading {
+  color: rgb(102, 102, 102);
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.salesList {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+    
+    .salesCard {
+        flex: 0 0 calc(25% - 23px); // Изменено для равномерного распределения 4 карточек
+        min-width: 250px; // Уменьшен минимальный размер
+        
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    
+    @media (max-width: 1200px) {
+        .salesCard {
+            flex: 0 0 calc(50% - 15px);
+        }
+    }
+    
+    @media (max-width: 700px) {
+        flex-direction: column;
+        gap: 40px;
+        
+        .salesCard {
+            flex: 1;
+            width: 100%;
+        }
+    }
+}
