@@ -811,6 +811,31 @@ main {
       justify-content: space-around;
 }
 
+@media (max-width: 700px) {
+  .simpleSketchbook {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0 20px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .simpleSketchbook .ssTextBox {
+    max-width: 100%;
+    width: 100%;
+  }
+  .simpleSketchbook .ssText {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 15px;
+  }
+  .simpleSketchbook .ssImgBox {
+    margin-top: 100px;
+  }
+}
+
 .btn-outline-primary {
   --bs-btn-color: $violet;
   --bs-btn-border-color: $violet;
@@ -853,8 +878,16 @@ main {
   max-width: 70%;
 }
 
+@media (max-width: 700px) {
+  .ssImgBox {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
 .ssTextBox {
   max-width: 30%;
+  width: 30%;
 }
 
 .ssHeading {
@@ -875,9 +908,6 @@ main {
   line-height: 170%;
   letter-spacing: 0%;
   text-align: left;
-}
-
-.simpleSketchbook {
-  margin-top: 100px;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */

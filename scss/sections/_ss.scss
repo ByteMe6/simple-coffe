@@ -2,6 +2,24 @@
   display: flex;
   padding-left: 5.6rem;
   justify-content: space-around;
+  @media (max-width: 700px) {
+    flex-direction: column;
+    padding: 0 20px;
+    align-items: center;
+    .ssTextBox {
+      max-width: 100%;
+      width: 100%;
+    }
+    .ssText {
+      max-width: 100%;
+      width: 100%;
+      padding: 0 15px;
+    }
+    .ssImgBox{
+        margin-top: 100px;
+    }
+
+  }
 }
 
 .btn-outline-primary {
@@ -39,9 +57,14 @@
 }
 .ssImgBox {
   max-width: 70%;
+  @media (max-width: 700px) {
+    max-width: 100%;
+    width: 100%;
+  }
 }
 .ssTextBox {
   max-width: 30%;
+  width: 30%;
 }
 
 .ssHeading {
@@ -53,15 +76,13 @@
   letter-spacing: 0%;
   text-align: left;
 }
-.ssText{
-    color: rgb(133, 133, 155);
-font-family: Roboto;
-font-size: 18px;
-font-weight: 400;
-line-height: 170%;
-letter-spacing: 0%;
-text-align: left;
-}
-.simpleSketchbook{
-    margin-top: 100px;
+.ssText {
+  color: rgb(133, 133, 155);
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 170%;
+  letter-spacing: 0%;
+  text-align: left;
+  width: 100%;
 }
